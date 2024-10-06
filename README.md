@@ -23,7 +23,7 @@ $ git clone
 2. Navegue até o diretório do projeto
 
 ```
-cd todo-list-app
+cd todo-list
 ```
 
 3. Instale as dependências necessárias
