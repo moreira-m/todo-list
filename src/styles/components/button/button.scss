@@ -1,0 +1,17 @@
+.add-button {
+    background-color: #fc574e;
+    border: 2px solid #fc574e;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+    transition: all .5s;
+    font-family: 'Barlow';
+
+    &:hover {
+        background-color: #f0f0f0;
+        border: 2px solid #fc574e;
+    }
+}

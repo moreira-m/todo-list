@@ -1,0 +1,80 @@
+@import '../../mixins/media';
+@import '../../core/colors';
+
+.main-container {
+    background-color: $midnightBlue;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.task-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 280px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-tablet {
+        flex-direction: row;
+        gap: 10%;
+    }
+
+    .todo-container, .finish-container {
+        display: flex;
+        flex-direction: column;
+
+        .h2-title {
+            text-align: center;
+        }
+
+        .task-list {
+            box-sizing: border-box;
+            min-height: 200px;
+            border: 10px;
+            width: 280px;
+            margin: 0 auto;
+            border-radius: 10px;
+            display: inline-block;
+            padding: 0 40px;
+            overflow-wrap: anywhere;
+            font-family: 'Barlow', sans-serif;
+
+            @include media-desktop {
+                width: 400px;
+            }
+
+            .task-item {
+                padding-top: 10px;
+
+                &::marker {
+                    content: '';
+                }
+
+                .toggle-menu {
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .todo-container {
+        .task-list {
+            background-color: $goldenYellow;
+        }
+    }
+
+    .finish-container {
+        .task-list {
+            background-color: #8ae98d;
+        }
+    }
+}
